@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>Support Kezio | Help Keep Kezio Going</title>
+    <meta name="description" content="Support Kezio, a collection of free web tools and Telegram bots. Your contribution helps keep the project running and makes it possible to build and add more tools over time." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://kezio.netlify.app/support.html" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/logo.png" type="image/png" />
+    <link rel="shortcut icon" href="assets/icons/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/icons/logo.png" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#00FF41" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Support Kezio | Help Keep Kezio Going" />
+    <meta property="og:description" content="Support Kezio, a collection of free web tools and Telegram bots. Your contribution helps keep the project running and makes it possible to build and add more tools over time." />
+    <meta property="og:image" content="https://kezio.netlify.app/assets/icons/og-image.png" />
+    <meta property="og:url" content="https://kezio.netlify.app/support.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Support Kezio | Help Keep Kezio Going" />
+    <meta name="twitter:description" content="Support Kezio, a collection of free web tools and Telegram bots. Your contribution helps keep the project running and makes it possible to build and add more tools over time." />
+    <meta name="twitter:image" content="https://kezio.netlify.app/assets/icons/og-image.png" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Support Kezio",
+        "description": "Support Kezio, a collection of free web tools and Telegram bots. Your contribution helps keep the project running and makes it possible to build and add more tools over time.",
+        "url": "https://kezio.netlify.app/support.html"
+    }
+    </script>
+
+    <!-- Dark Mode Flash Fix -->
+    <script>
+        (function() {
+            const stored = localStorage.getItem('kezio-theme');
+            if (stored === 'dark' || (stored === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link">
+                <img src="assets/icons/logo.png" alt="Kezio" class="logo-img" />
+            </a>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="support.html" class="active">Support</a></li>
+                    <li><a href="https://karojunior.netlify.app" target="_blank">Dev</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <iconify-icon icon="material-symbols-light:light-mode-outline" class="theme-icon"></iconify-icon>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Navigation menu">
+        <button class="mobile-drawer-close" id="drawerClose" aria-label="Close navigation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <ul class="mobile-drawer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="support.html" class="active">Support</a></li>
+            <li><a href="https://karojunior.netlify.app" target="_blank">Dev</a></li>
+        </ul>
+        <div class="mobile-drawer-theme">
+            <span class="mobile-drawer-theme-label">Theme</span>
+            <button class="mobile-theme-toggle" id="mobileThemeToggle">
+                <iconify-icon icon="material-symbols-light:light-mode-outline" class="theme-icon"></iconify-icon>
+                <span class="theme-label">Light</span>
+            </button>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-content support-page">
+            <div class="container">
+                <!-- Two-column layout: Heading + Intro + Myhappr -->
+                <div class="support-grid">
+                    <!-- Left Column: Heading and Intro -->
+                    <div class="support-text">
+                        <h1>Help Keep Kezio Going</h1>
+                        <p class="support-intro">Kezio is a collection of free tools built to be useful and accessible to everyone. If you've found something useful here, your support helps keep the project running and makes it possible to build and add more tools over time.</p>
+                    </div>
+
+                    <!-- Right Column: Myhappr Widget -->
+                    <div class="support-widget">
+                        <iframe
+                            src="https://myhappr.com/embed/karojunior?color=%2300E63A&textColor=%23FFFFFF&title=Send+a+Tip&theme=transparent&cardBg=%23FFFFFF&cardText=%2309090B"
+                            width="100%"
+                            height="600"
+                            frameborder="0"
+                            scrolling="auto"
+                            style="border-radius: 12px;"
+                            loading="lazy"
+                        ></iframe>
+                    </div>
+                </div>
+
+                <!-- Crypto Section -->
+                <div class="support-section crypto-section">
+                    <h2>Prefer Crypto?</h2>
+                    <p>You can also support Kezio directly using one of the wallets below. Make sure you're sending to the correct network before confirming a transaction.</p>
+
+                    <div class="crypto-grid">
+                        <!-- Bitcoin -->
+                        <div class="crypto-card card">
+                            <div class="crypto-header">
+                                <span class="crypto-name">Bitcoin</span>
+                                <span class="crypto-network">BTC</span>
+                            </div>
+                            <div class="crypto-address-wrapper">
+                                <code class="crypto-address" id="btc-address">bc1qll0qyv4n9l3fmhv6amku5d6naa9hd05tx789kt</code>
+                                <button class="crypto-copy-btn" data-address-id="btc-address" data-currency="Bitcoin" aria-label="Copy Bitcoin wallet address">
+                                    <iconify-icon icon="material-symbols-light:content-copy-outline"></iconify-icon>
+                                    <span class="copy-text">Copy</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Ethereum -->
+                        <div class="crypto-card card">
+                            <div class="crypto-header">
+                                <span class="crypto-name">Ethereum</span>
+                                <span class="crypto-network">ETH</span>
+                            </div>
+                            <div class="crypto-address-wrapper">
+                                <code class="crypto-address" id="eth-address">0x76A0Bf30fAdc08aD8ac2e971C5003aFAF22Cfe5D</code>
+                                <button class="crypto-copy-btn" data-address-id="eth-address" data-currency="Ethereum" aria-label="Copy Ethereum wallet address">
+                                    <iconify-icon icon="material-symbols-light:content-copy-outline"></iconify-icon>
+                                    <span class="copy-text">Copy</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Solana -->
+                        <div class="crypto-card card">
+                            <div class="crypto-header">
+                                <span class="crypto-name">Solana</span>
+                                <span class="crypto-network">SOL</span>
+                            </div>
+                            <div class="crypto-address-wrapper">
+                                <code class="crypto-address" id="sol-address">HAF6szbjWm1JANR8CF9yuH8CMMXx2pwQrhHGuXDr9n7F</code>
+                                <button class="crypto-copy-btn" data-address-id="sol-address" data-currency="sol" aria-label="Copy Solana wallet address">
+                                    <iconify-icon icon="material-symbols-light:content-copy-outline"></iconify-icon>
+                                    <span class="copy-text">Copy</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Litecoin -->
+                        <div class="crypto-card card">
+                            <div class="crypto-header">
+                                <span class="crypto-name">Litecoin</span>
+                                <span class="crypto-network">LTC</span>
+                            </div>
+                            <div class="crypto-address-wrapper">
+                                <code class="crypto-address" id="ltc-address">MJnUzYUjsKTpQDLnZ2ozomVK8zPiqwzTGs</code>
+                                <button class="crypto-copy-btn" data-address-id="ltc-address" data-currency="Litecoin" aria-label="Copy Litecoin wallet address">
+                                    <iconify-icon icon="material-symbols-light:content-copy-outline"></iconify-icon>
+                                    <span class="copy-text">Copy</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="crypto-notice card">
+                        <p><strong>Important:</strong> Crypto transactions are irreversible. Double-check the wallet address and network before sending.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-nav">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kezio</p>
+                <p>Made by <a href="https://karojunior.netlify.app" target="_blank">Karo Junior</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

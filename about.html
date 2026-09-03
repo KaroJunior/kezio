@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>About Kezio | Web Tools and Telegram Bots</title>
+    <meta name="description" content="Learn about Kezio, a collection of free web tools and Telegram bots built to solve everyday problems." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://kezio.netlify.app/about.html" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/logo.png" type="image/png" />
+    <link rel="shortcut icon" href="assets/icons/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/icons/logo.png" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#00FF41" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Kezio | Web Tools and Telegram Bots" />
+    <meta property="og:description" content="Learn about Kezio, a collection of free web tools and Telegram bots built to solve everyday problems." />
+    <meta property="og:image" content="https://kezio.netlify.app/assets/icons/og-image.png" />
+    <meta property="og:url" content="https://kezio.netlify.app/about.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Kezio | Web Tools and Telegram Bots" />
+    <meta name="twitter:description" content="Learn about Kezio, a collection of free web tools and Telegram bots built to solve everyday problems." />
+    <meta name="twitter:image" content="https://kezio.netlify.app/assets/icons/og-image.png" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "About Kezio",
+        "description": "Learn about Kezio, a collection of free web tools and Telegram bots built to solve everyday problems.",
+        "url": "https://kezio.netlify.app/about.html",
+        "about": {
+            "@type": "Thing",
+            "name": "Web Tools and Telegram Bots"
+        }
+    }
+    </script>
+
+    <!-- Dark Mode Flash Fix -->
+    <script>
+        (function() {
+            const stored = localStorage.getItem('kezio-theme');
+            if (stored === 'dark' || (stored === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link">
+                <img src="assets/icons/logo.png" alt="Kezio" class="logo-img" />
+            </a>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="https://karojunior.netlify.app" target="_blank">Dev</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <iconify-icon icon="material-symbols-light:light-mode-outline" class="theme-icon"></iconify-icon>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Navigation menu">
+        <button class="mobile-drawer-close" id="drawerClose" aria-label="Close navigation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <ul class="mobile-drawer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="https://karojunior.netlify.app" target="_blank">Dev</a></li>
+        </ul>
+        <div class="mobile-drawer-theme">
+            <span class="mobile-drawer-theme-label">Theme</span>
+            <button class="mobile-theme-toggle" id="mobileThemeToggle">
+                <iconify-icon icon="material-symbols-light:light-mode-outline" class="theme-icon"></iconify-icon>
+                <span class="theme-label">Light</span>
+            </button>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-content">
+            <div class="container">
+                <h1>About Kezio</h1>
+
+                <p class="about-intro">Kezio is a collection of free web tools and Telegram bots built to be useful, simple, and easy to access.</p>
+
+                <p>Kezio brings these projects together in one place, so you can discover and access them without having to look through different websites and platforms.</p>
+
+                <p>Some tools are web-based and work in your browser. Others are Telegram bots you can use directly from the Telegram app. More tools will be added over time as I build them.</p>
+
+                <h2>Why Kezio exists</h2>
+
+                <p>Kezio started as a way to give the smaller projects I build a proper home. Instead of leaving useful tools scattered across different platforms, I wanted one place where they could be found and used.</p>
+
+                <p>Kezio is a directory for projects that may be useful to other people. Each tool is independent, and the way you use it depends on the project.</p>
+
+                <h2>What you'll find here</h2>
+
+                <p>Every tool on Kezio is an independent project. The collection includes:</p>
+
+                <ul class="about-list">
+                    <li><strong>- Web tools:</strong> browser-based utilities you can use in your browser.</li>
+                    <li><strong>- Telegram bots:</strong> tools you can use directly through Telegram.</li>
+                </ul>
+
+                <p>Some tools are hosted here. Others live on their own domains or platforms. The directory brings them together so you can find what you need.</p>
+
+                <h2>Who's behind Kezio</h2>
+
+                <p>Kezio is built by Karo Junior, a developer who works on web apps, Telegram bots, Android apps, games, and other software projects.</p>
+
+                <p>You can see more of my work on my <a href="https://karojunior.netlify.app" target="_blank">personal website</a>.</p>
+
+                <h2>What's next</h2>
+
+                <p>More projects will be added as they are built. They may be web tools, Telegram bots, or something else.</p>
+
+                <p>Have an idea for a useful tool? Send it through the <a href="contact.html">contact page</a>.</p>
+
+                <!-- ============================================================
+                DIRECTORY BADGES — Add/uncomment badges here as Kezio is listed on new platforms.
+                ============================================================ -->
+                <!--
+                <div class="about-badges">
+                    <h3>Kezio is listed on</h3>
+                    <div class="badges-grid">
+                        <img src="assets/badges/producthunt.svg" alt="Product Hunt" class="badge" />
+                        <img src="assets/badges/orynth.svg" alt="Orynth" class="badge" />
+                        <img src="assets/badges/peerpush.svg" alt="PeerPush" class="badge" />
+                    </div>
+                </div>
+                -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-nav">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kezio</p>
+                <p>Made by <a href="https://karojunior.netlify.app" target="_blank">Karo Junior</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
