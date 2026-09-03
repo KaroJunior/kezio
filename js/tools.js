@@ -76,7 +76,7 @@ const tools = [
         name: 'Password Generator',
         type: 'web',
         platformLabel: 'Web',
-        url: 'https://karojunior.github.io/password-generator/',
+        url: 'https://karojunior.github.io/dual-themes-password-generator/',
         description: 'Generate secure passwords and check password strength.',
         icon: 'icon-lock', // Will be rendered as SVG
         keywords: [
