@@ -1758,9 +1758,16 @@ iconify-icon {
 
 /* ---------- Featured On Section ---------- */
 .featured-section {
-    margin-top: 3rem;
-    padding-top: 2.5rem;
+    margin: 3rem 0 0;
+    padding: 2.5rem 0 1rem;
     border-top: 3px solid var(--border-color);
+    width: 100%;
+}
+
+.featured-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .featured-section h2 {
@@ -1779,6 +1786,7 @@ iconify-icon {
     align-items: center;
     gap: 2rem 2.5rem;
     padding: 0.5rem 0;
+    width: 100%;
 }
 
 .badge-link {
@@ -1787,6 +1795,7 @@ iconify-icon {
     justify-content: center;
     line-height: 0;
     transition: transform 0.2s ease, opacity 0.2s ease;
+    flex-shrink: 0;
 }
 
 .badge-link:hover {
@@ -1829,8 +1838,8 @@ iconify-icon {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .featured-section {
-        margin-top: 2rem;
-        padding-top: 1.5rem;
+        margin: 2rem 0 0;
+        padding: 1.5rem 0 0.5rem;
     }
 
     .featured-section h2 {
@@ -1849,8 +1858,8 @@ iconify-icon {
 
 @media (max-width: 480px) {
     .featured-section {
-        margin-top: 1.5rem;
-        padding-top: 1rem;
+        margin: 1.5rem 0 0;
+        padding: 1rem 0 0.25rem;
     }
 
     .featured-section h2 {
