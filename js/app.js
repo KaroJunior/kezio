@@ -36,6 +36,8 @@
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('kezio-theme', theme);
         updateThemeIcons(theme);
+        // Dispatch event for badge updates
+        document.dispatchEvent(new CustomEvent('themeChanged'));
     }
 
     function toggleTheme() {
@@ -77,6 +79,29 @@
         const stored = getStoredTheme();
         let initial = stored || getSystemTheme();
         setTheme(initial);
+        // Update badges after theme is set
+        updateBadges();
+    }
+
+    // ---------- Featured Badges Theme Switching ----------
+    function updateBadges() {
+        const theme = document.documentElement.getAttribute('data-theme') || 'light';
+        const isDark = theme === 'dark';
+        
+        document.querySelectorAll('.badge-img').forEach(img => {
+            // For single-version badges, keep them visible
+            if (img.classList.contains('badge-single')) {
+                img.style.display = 'block';
+                return;
+            }
+            
+            // For light/dark badges, show/hide based on theme
+            if (img.classList.contains('badge-light')) {
+                img.style.display = isDark ? 'none' : 'block';
+            } else if (img.classList.contains('badge-dark')) {
+                img.style.display = isDark ? 'block' : 'none';
+            }
+        });
     }
 
     // ---------- Mobile Drawer ----------
@@ -414,7 +439,6 @@
         });
     }
 
-
     // ---------- Init ----------
     function init() {
         // Theme
@@ -425,6 +449,8 @@
         if (mobileThemeToggle) {
             mobileThemeToggle.addEventListener('click', toggleTheme);
         }
+        // Update badges when theme changes via custom event
+        document.addEventListener('themeChanged', updateBadges);
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
             if (!getStoredTheme()) {
                 setTheme(e.matches ? 'dark' : 'light');
