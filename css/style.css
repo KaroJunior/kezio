@@ -1762,6 +1762,7 @@ iconify-icon {
     padding: 2.5rem 0 1rem;
     border-top: 3px solid var(--border-color);
     width: 100%;
+    overflow: hidden;
 }
 
 .featured-section .container {
@@ -1780,13 +1781,18 @@ iconify-icon {
 }
 
 .badges-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem 2.5rem;
-    padding: 0.5rem 0;
+    overflow: hidden;
     width: 100%;
+    position: relative;
+}
+
+.badges-track {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    width: max-content;
+    animation: scrollBadges 30s linear infinite;
+    will-change: transform;
 }
 
 .badge-link {
@@ -1794,8 +1800,8 @@ iconify-icon {
     align-items: center;
     justify-content: center;
     line-height: 0;
-    transition: transform 0.2s ease, opacity 0.2s ease;
     flex-shrink: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .badge-link:hover {
@@ -1807,6 +1813,11 @@ iconify-icon {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+/* Pause animation on hover */
+.badges-container:hover .badges-track {
+    animation-play-state: paused;
 }
 
 /* Light/Dark badge visibility */
@@ -1835,6 +1846,16 @@ iconify-icon {
     display: block;
 }
 
+/* Keyframe animation for infinite scroll */
+@keyframes scrollBadges {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .featured-section {
@@ -1847,12 +1868,13 @@ iconify-icon {
         margin-bottom: 1rem;
     }
 
-    .badges-container {
-        gap: 1.5rem 2rem;
+    .badges-track {
+        gap: 1.5rem;
+        animation-duration: 25s;
     }
 
     .badge-img {
-        max-width: 180px;
+        max-width: 140px;
     }
 }
 
@@ -1866,11 +1888,31 @@ iconify-icon {
         font-size: 1rem;
     }
 
-    .badges-container {
-        gap: 1rem 1.5rem;
+    .badges-track {
+        gap: 1rem;
+        animation-duration: 20s;
     }
 
     .badge-img {
-        max-width: 140px;
+        max-width: 100px;
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .badges-track {
+        animation: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem 2rem;
+        width: 100%;
+    }
+
+    .badges-container:hover .badges-track {
+        animation-play-state: running;
+    }
+
+    .badge-link {
+        flex: 0 1 auto;
     }
 }
